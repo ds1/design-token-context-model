@@ -1,6 +1,8 @@
 # Design Token Context Model
 ### Draft 0.1 January 20, 2026
 
+> **The theory has moved.** The specification, the coordinate-system thesis, and the companion pages now live in [`gitfig-community/single-source-of-taste`](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/README.md), together with the Single Source of Taste sequence that grew out of them. The wiki pages here are pointers. This repository remains the home of the [token collections](tokens/) that project the ontology into Figma, and of the [archive](archive/) of working drafts.
+
 Exploration of a robust specification for multi-dimensional design token resolution with full Figma Variables support.
 
 ## The Problem
@@ -22,7 +24,7 @@ Current systems treat context as flat modes (`light`/`dark`, `desktop`/`mobile`)
 
 ## What's Included
 
-### [Whitepaper](https://github.com/ds1/design-token-context-model/wiki/design-token-context-ontology-whitepaper)
+### [Specification](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/05-design-token-context-ontology-specification.md)
 
 The complete specification defining:
 
@@ -58,13 +60,25 @@ tokens/
 
 ### Additional Documentation
 
-Theoretical explorations and supporting material:
+The theory pages, in reading order, in their canonical home:
 
-- [Context as Coordinate System Thesis](https://github.com/ds1/design-token-context-model/wiki/context-as-coordinate-system-thesis) — Foundational argument that tokens are policies mapping context coordinates to values
-- [Context Coordinate Model Exploration](https://github.com/ds1/design-token-context-model/wiki/context-coordinate-model-exploration) — Application of embodied AI principles to design tokens
-- [Coordinate Model and Token Tiers](https://github.com/ds1/design-token-context-model/wiki/coordinate-model-and-token-tiers) — How the coordinate model fits within the standard 3-tier token taxonomy
-- [Design Tokens for Embodied AI](https://github.com/ds1/design-token-context-model/wiki/design_tokens_for_embodied_ai) — Theoretical bridge between UI design tokens and AI/robotics representations
-- [Design Systems: Single Source of Truth](https://github.com/ds1/design-token-context-model/wiki/Design-Systems_-Single-Source-of-Truth) — Analysis of SSOT architecture and data normalization principles
+- [Token Systems Should Adopt CSS's Model](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/01-token-systems-should-adopt-the-css-model.md) — Why flat modes explode combinatorially and what CSS already solved
+- [Context as Coordinate System](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/02-context-as-coordinate-system.md) — Foundational argument that tokens are policies mapping context coordinates to values
+- [Coordinate Model and the Three-Tier Taxonomy](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/03-coordinate-model-and-the-three-tier-taxonomy.md) — How the coordinate model fits within the standard 3-tier token taxonomy
+- [Design Token Context Ontology](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/04-design-token-context-ontology.md) — Overview of the ontology (this README, as published)
+- [Design Token Context Ontology: Specification](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/05-design-token-context-ontology-specification.md) — The full specification: 12 categories, 93 dimensions, resolution algorithm
+- [The Single Source of Taste](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/06-the-single-source-of-taste.md) — Aesthetic intent as a policy class with a `judged` validation regime and a single design authority
+- [Carrying Judged Policies Through Figma](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/07-carrying-judged-policies-through-figma.md) — How taste metadata survives the Figma round-trip
+- [Compound Conditions Beyond Figma](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/08-compound-conditions-beyond-figma.md) — The structural residue Figma cannot represent and a code-resident resolver for it
+- [Glossary](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/GLOSSARY.md) — Every term across the pages
+
+Supporting material:
+
+- [Coordinate Model Working Notes](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/appendix/coordinate-model-working-notes.md) — Application of embodied AI principles to design tokens (the notes behind the thesis)
+- [Design Tokens for Embodied AI](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/appendix/design-tokens-for-embodied-ai.md) — Theoretical bridge between UI design tokens and AI/robotics representations
+- [Design Systems: Single Source of Truth](archive/Design%20Systems_%20Single%20Source%20of%20Truth.md) — Analysis of SSOT architecture and data normalization principles (archived research report)
+
+The `archive/` folder keeps the original working drafts for history; the copies under `gitfig-community/single-source-of-taste` are canonical.
 
 ## Collections Overview
 
@@ -123,9 +137,11 @@ Each token has explicit values for ALL modes in its collection:
 
 ### Import to Figma with GitFig
 
-1. Install [GitFig](https://github.com/nicholasareed/gitfig) plugin in Figma
-2. Connect your repository
-3. Import each collection file → each becomes a Figma Variable Collection with modes
+1. Install the [GitFig](https://www.figma.com/community/plugin/1584467274034932618) plugin in Figma and connect a repository containing the `tokens/` folder
+2. In GitFig's **Mapping** section, add a Variables target for each collection file, using the collection name from `manifest.json`
+3. **Pull**: each collection file becomes a Figma Variable Collection, and each `mode` key becomes a mode
+
+This projects the ontology onto Figma's flat mode model; compound conditions, specificity, and precedence do not survive the projection. See [Carrying Judged Policies Through Figma](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/07-carrying-judged-policies-through-figma.md).
 
 ### Use with Style Dictionary
 
@@ -208,4 +224,4 @@ MIT
 
 ## Contributing
 
-Issues and pull requests welcome. See the [whitepaper](https://github.com/ds1/design-token-context-model/wiki/design-token-context-ontology-whitepaper) for the complete specification that implementations should follow.
+Issues and pull requests welcome. See the [specification](https://github.com/ds1/gitfig-community/blob/main/single-source-of-taste/05-design-token-context-ontology-specification.md) for the complete ontology that implementations should follow.
