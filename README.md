@@ -65,6 +65,7 @@ Theoretical explorations and supporting material:
 - [Coordinate Model and Token Tiers](https://github.com/ds1/design-token-context-model/wiki/coordinate-model-and-token-tiers) — How the coordinate model fits within the standard 3-tier token taxonomy
 - [Design Tokens for Embodied AI](https://github.com/ds1/design-token-context-model/wiki/design_tokens_for_embodied_ai) — Theoretical bridge between UI design tokens and AI/robotics representations
 - [Design Systems: Single Source of Truth](https://github.com/ds1/design-token-context-model/wiki/Design-Systems_-Single-Source-of-Truth) — Analysis of SSOT architecture and data normalization principles
+- [The Single Source of Taste](https://github.com/ds1/design-token-context-model/wiki/single-source-of-taste) — Counterpart to the SSOT analysis: when building is democratized, judgment becomes the scarce asset, and the Git-backed design system becomes the governed source of taste
 
 ## Collections Overview
 
